@@ -205,3 +205,72 @@ let obj = {
 }
 
 */
+function stringifyNumbers(obj){
+  console.log()
+  let values = Object.values(obj)
+  let num = []
+  for (let i = 0; i < values.length; i++) {
+    if(typeof values[i] === 'number' ){
+      num = num.concat(values[i])
+    }
+    else if (Array.isArray(values[i])){
+
+    }
+    else if(typeof values[i] === 'object'){
+      return num = num.concat(stringifyNumbers(values[i]))
+    }
+  }
+  return num
+}
+
+
+
+let obj1 = {
+  num: 1,
+  test: [],
+  data: {
+      val: 4,
+      info: {
+          isRight: true,
+          random: 66
+      }
+  }
+}
+stringifyNumbers(obj1)
+
+/*
+collectStrings
+Write a function called collectStrings which accepts an object and returns an array of all the values in the object that have a typeof string
+
+*/
+const obj = {
+  stuff: "foo",
+  data: {
+      val: {
+          thing: {
+              info: "bar",
+              moreInfo: {
+                  evenMoreInfo: {
+                      weMadeIt: "baz"
+                  }
+              }
+          }
+      }
+  }
+}
+
+ function collectStrings(obj){
+  let values = Object.values(obj)
+  let arr = []
+  for (let value of values) {
+    if(typeof value === 'string'){
+      arr = arr.concat(value)
+    }
+    else if (typeof value === 'object'){
+      return arr = arr.concat(collectStrings(value))
+    }
+  }
+  return arr
+}
+
+console.log(collectStrings(obj)) // ["foo", "bar", "baz"])
