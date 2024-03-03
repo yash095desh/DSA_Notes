@@ -22,6 +22,13 @@ class SinglyLinkedList {
         }
         this.length ++
     }
+    transverse(){
+        let current = this.head
+        while(current){
+            console.log(current.value)
+            current = current.next
+        }
+    }
 }
 
 let list = new SinglyLinkedList
@@ -29,5 +36,6 @@ list.push("hi")
 list.push("there")
 list.push("What")
 list.push("are")
-
-console.log(list)
+list.push("You")
+list.push("doing")
+list.transverse()
