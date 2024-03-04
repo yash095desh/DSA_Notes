@@ -106,5 +106,5 @@ list.push("What")
 list.push("are")
 list.push("You")
 list.push("doing")
-console.log(list.get('sd'))
+console.log(list.get(3))
 
