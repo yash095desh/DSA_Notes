@@ -1,11 +1,13 @@
-// Get Method 
+// Set Method
 
-/*  Retriveing a node by it's position in the linked list 
+/*
+    pseudocode
+    - This function should accept a value and a index
+    - Use your get function to find the specific node 
+    - If the node is node found ,return false
+    - If the Node is found ,set the value of that node to be the value 
+      passesd to the function and return old value  
 
- # pseudocode
- - this function should accept an index
- - If the index is less than zero or greater than length of list return null 
- - Loop through the list until you reach the index and return the node at the specific index 
 */
 
 class Node {
@@ -93,7 +95,18 @@ class SinglyLinkedList {
             value = value.next
             index--
         }
-        return value.value
+        return value
+    }
+    set(val,index){
+        if(!Number.isInteger(index))return ReferenceError('Not a num')
+        if(index<0 || index>=this.length)return null
+        let foundNode = this.get(index)
+        if(foundNode){
+            foundNode.value = val
+        }else{
+            return false
+        }
+        return true
     }
 }
 
@@ -105,5 +118,5 @@ list.push("What")
 list.push("are")
 list.push("You")
 list.push("doing")
-console.log(list.get(3 ))
-
+console.log(list.set('learning',5))
+list.transverse()
