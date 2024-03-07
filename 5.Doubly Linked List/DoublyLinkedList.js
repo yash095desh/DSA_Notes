@@ -10,7 +10,7 @@
 /*
 # DOUBLY LINKED LIST :
                         Almost identical to Singly Linked List ,
-                        expect every node has another pointer ,to the 
+                        except every node has another pointer ,to the 
                         previous node
 
 # Comparing with Singly linked List 
