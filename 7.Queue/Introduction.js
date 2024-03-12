@@ -70,3 +70,16 @@ class Queue{
         f)Return the value of the node dequeued 
 
  */
+
+/*
+    @ Big O of Queues
+        - Insertion O(1)
+        - Removal O(1)
+        - Searching O(N)
+        - Access O(N)
+
+    * Recap :
+        - Queues are a FIFO data Structure all elemnets are in first out 
+        - Queues are a useful for processing task and are foundational for more complex data structures
+        - Insertion and Removal can be done in O(1)
+*/
