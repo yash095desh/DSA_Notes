@@ -31,4 +31,42 @@
             2) Same In Second Combination (Unshift,Pop) every time you insert elements using Unshift the indexes are rearranged 
         
         So it is good to Create own Queue Structure just like linked list 
+
 */
+
+// Creating own Queue from Scratch
+
+class Node{
+    constructor(value){
+        this.value = value;
+        this.next = null;
+    }
+}
+class Queue{
+    constructor(){
+        this.first = null;
+        this.last = null;
+        this.size = 0;
+    }
+    
+}
+/*
+   @ Methods Pseudocode
+   1) Enqueue :
+        a) This function Should accept some value
+        b)Create a new node using that value passed to the function 
+        c) If there are no nodes in the queue set the node to be first and last property of the Queue
+        d)Otherwise set the next property on the current last to be that newNode,and then set the last 
+        property to be that node
+        e)Increment the size and return it 
+    
+    2)Dequeue :
+        a) If there is no first property ,just return null
+        b) Store the first property in a variable
+        c) See if the first is the same as the last (check if there is only 1 node) if so,set the first and last 
+        to be null
+        d)If there is more than 1 node,set the first property to be the next property of the first 
+        e)Decrement the size by 1
+        f)Return the value of the node dequeued 
+
+ */
