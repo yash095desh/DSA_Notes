@@ -24,7 +24,7 @@
 */
 function linearSearch(arr,value){
     for(let index in arr){
-        if(arr[index] === value ){
+        if(arr[index] === value ){ 
             return index
         }
     }

@@ -15,22 +15,36 @@
         d) If the values is too large,move the right pointer down 
     - If you not find the required values return 1
 */
+// function binarySearch(arr,value){
+//     let left = 0 
+//     let right = arr.length -1 
+//     let middle ; 
+//     while(left<right-1 ){
+//         middle = Math.round((left+right)/2)
+//         if(arr[middle] === value)return middle
+//         else if(arr[right] === value)return right
+//         else if(arr[middle]>value){
+//             right = middle 
+//         }
+//         else if(arr[middle]<value){
+//             left = middle 
+//         }
+//     }
+//     return -1
+// }
 function binarySearch(arr,value){
-    let left = 0 
-    let right = arr.length -1 
-    let middle ; 
-    while(left<right-1 ){
-        middle = Math.round((left+right)/2)
-        if(arr[middle] === value)return middle
-        else if(arr[right] === value)return right
-        else if(arr[middle]>value){
-            right = middle 
+    let left = 0
+    let right = arr.length - 1
+    let middle = Math.floor((left+right)/2)
+    while(arr[middle] !== value && left <= right){
+        if(arr[middle]>value){
+            right = middle -1
+        }else{
+            left = middle + 1
         }
-        else if(arr[middle]<value){
-            left = middle 
-        }
+        middle =  Math.floor((left+right)/2)
     }
-    return -1
+    return arr[middle] === value ? middle : -1
 }
-console.log(binarySearch([1,2,3,4,5],5))
+console.log(binarySearch([1,2,3,4,5],1))
                                                                                                    
