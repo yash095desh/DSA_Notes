@@ -47,4 +47,9 @@ function binarySearch(arr,value){
     return arr[middle] === value ? middle : -1
 }
 console.log(binarySearch([1,2,3,4,5],1))
+
+// Big O of Binary Search 
+// 1. Worst Case and  Average Case - (O(log n))
+// 2. Best Case - (O(1))
+
                                                                                                    
