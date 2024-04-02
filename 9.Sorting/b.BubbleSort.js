@@ -55,4 +55,28 @@ function bubbleSort(arr){
     return arr
 }
 
-console.log(bubbleSort([ 5 , 3 , 4 , 1 , 2,-1 ]))
+// Optimised with noswap 
+
+function OptimizedbubbleSort(arr){
+    let noswap;
+    for (let i = arr.length; i > 0 ; i--) {
+        noswap = true
+        for(let j = 0 ; j < i - 1 ; j++){
+            if(arr[j]>arr[j+1]){
+                let temp = arr[j]
+                arr[j] = arr[j+1]
+                arr[j+1] = temp
+                noswap = false 
+            }
+        }
+        if(noswap)break;
+    }
+    return arr
+}
+
+console.log(OptimizedbubbleSort([ 5 , 3 , 4 , 1 , 2,-1 ]))
+/*
+    Big O of bubble sort : 
+                        Generally big o of bubble sort is O(n^2) because of nested loops but when array is more of sorted by using optimised approch 
+                        we can say that Big O is linear or O(n)
+*/
